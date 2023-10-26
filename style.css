@@ -3,9 +3,9 @@
 	--clr-dark: 0 0% 13%; /*hsl(0, 0%, 13%) */
 	--clr-gold: 44 78% 48%; /* hsl(44, 78%, 48%) */
 	--clr-white: 0 0% 100%; /*hsl(0, 0%, 100%)*/
-	--clr-light: 240 2 25; /* hsl(240, 2%, 25%) */
+	--clr-gray: 240 2 25; /* hsl(240, 2%, 25%) */
 	--clr-accent: 0 0 80%; /* hsl(0, 0%, 80%) */
-	--clr-gray: 0 0% 33%; /* hsl(0, 0%, 33%)*/
+	--clr-light: 0 0% 33%; /* hsl(0, 0%, 33%)*/
 	--clr-nav: 240 29% 6; /*hsl(240, 29%, 6%)*/
 
 	/* font-sizes */
@@ -257,67 +257,50 @@ select {
 	text-align: center;
 	display: grid;
 	place-items: center;
-	padding-inline: 1rem;
-	padding-bottom: 4rem;
+	/* padding-inline: 1rem;
+	padding-bottom: 4rem; */
 }
 
 .grid-container p:not([class]) {
 	max-width: 50ch;
 }
 
-/* Container */
-.container {
-	height: 100%;
-	background-color: hsl(0, 0%, 13%);
-}
-
 /* Navbar */
-.navbar {
+.primary-header {
 	width: 100%;
 	height: 10rem;
-	background-color: #202020;
+	background-color: hsl(var(--clr-dark));
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;
 	align-items: center;
 	justify-content: space-between;
-	border: 1px solid red;
 }
 
-.brand-navbar {
-	width: 100%;
-	position: absolute;
-	top: 1rem;
-}
-
-.logo {
+/* .logo {
 	position: absolute;
 	top: 1rem;
 	left: 5rem;
 	width: 5%;
 	height: auto;
-}
+} */
 
-.brand span {
-	position: absolute;
-	top: 1rem;
-	left: 12rem;
+.brand-navbar span {
 	font-size: 3rem;
 	color: hsl(0, 0%, 100%);
 	letter-spacing: 0.3rem;
 	text-transform: uppercase;
+	margin-left: 5rem;
 }
 
-.search-bar {
-	position: absolute;
-	top: 50%;
+/* .search-bar {
 	right: 15rem;
-	transform: translateY(-50%);
-}
+	position: relat
+} */
 
 .search-bar input {
-	width: 45rem;
+	width: 30rem;
 	height: 4rem;
 	background-color: hsl(240, 2%, 25%);
 	border: none;
@@ -325,6 +308,8 @@ select {
 	font-size: 1.6rem;
 	color: #fff;
 	border-radius: 0.5rem;
+	position: relative;
+	margin-right: 1rem;
 }
 
 .search-bar input::placeholder {
@@ -334,7 +319,7 @@ select {
 .search-bar i {
 	position: absolute;
 	top: 50%;
-	left: 1.5rem;
+	/* left: 2rem; */
 	transform: translateY(-50%);
 	font-size: 1.6rem;
 	color: #ccc;
@@ -390,7 +375,7 @@ select {
 }
 
 .navigation a {
-	font-family: "Roboto Slab", "Times New Roman", Times, serif;
+	font-family: var(--ff-sans-normal);
 	color: #fff;
 	font-size: 5rem;
 	letter-spacing: 0.3rem;
@@ -466,32 +451,27 @@ select {
 	transform: scale(1);
 }
 /* End Navbar */
+
 /* Landing */
+
 .landing {
-	height: 95vh;
+	height: 85vh;
+}
+
+.landing-content {
 	position: relative;
 }
 
-.landing-img {
-	width: 92%;
-	height: 70vh;
-	position: absolute;
-	top: 11rem;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-.landing-img img {
-	width: 100%;
-	height: 100%;
+/* .landing-content img {
+	width: 90%;
+	height: auto;
 	object-fit: cover;
-	/* opacity: 0.3; */
-}
+} */
 
 .banner {
 	position: absolute;
+	left: 10rem;
 	bottom: 5rem;
-	left: 70rem;
 }
 
 .banner-heading {
@@ -501,7 +481,7 @@ select {
 }
 
 .banner-heading span {
-	font-family: "Roboto Slab", "Times New Roman", Times, serif;
+	font-family: var(--ff-sans-disp);
 	font-size: 8rem;
 	color: #dba81b;
 	letter-spacing: 0.5rem;
@@ -512,11 +492,12 @@ select {
 }
 
 .banner-content p {
-	width: 30rem;
+	width: 40rem;
 	font-size: 1.5rem;
 	color: #fff;
 	margin-right: 2rem;
 	line-height: 1.5;
+	text-align: left;
 }
 
 .banner-content button {
@@ -531,19 +512,30 @@ select {
 	cursor: pointer;
 }
 /* End Landing */
+
 /* About */
-.about {
+
+.grid-container-about {
+	column-gap: var(--container-gap, 10rem);
+	grid-template-columns: repeat(2, 1fr 1fr);
+	grid-template-areas: ". about-left about-right .";
 	height: 80vh;
+	text-align: left;
 	background-color: #313133;
-	align-items: center;
-	justify-content: space-around;
-	position: relative;
+}
+
+.grid-container-about .about-left {
+	grid-column: about-left;
+}
+
+.grid-container-about .about-right {
+	grid-area: about-right;
 }
 
 .about-left h1 {
 	font-size: 5rem;
 	color: #fff;
-	width: 50rem;
+	width: 40rem;
 	margin-bottom: 6rem;
 }
 
@@ -569,27 +561,27 @@ select {
 	width: 50rem;
 	height: 35rem;
 	border: 3rem solid hsl(0, 0%, 33%);
-	position: absolute;
+	/* position: absolute; */
 	top: 15rem;
 	right: 40rem;
 }
 
 .about-img-wrapper {
-	width: 50rem;
+	width: 60rem;
 	height: 35rem;
-	position: absolute;
+	/* position: absolute; */
 	top: 8rem;
 	right: 33rem;
 }
 
 .about-img-wrapper img {
 	width: 100%;
-	height: 100%;
+	height: auto;
 	object-fit: cover;
 }
 
 .section-bottom {
-	position: absolute;
+	/* position: absolute; */
 	bottom: 2rem;
 	right: 33rem;
 	height: 12rem;
@@ -600,7 +592,7 @@ select {
 }
 
 .section-bottom h1 {
-	font-family: "Roboto Slab", "Times New Roman", Times, serif;
+	font-family: var(--ff-sans-normal);
 	font-size: 6rem;
 	color: #555;
 	letter-spacing: 0.5rem;

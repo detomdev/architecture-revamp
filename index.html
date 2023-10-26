@@ -15,43 +15,40 @@
 		/>
 	</head>
 	<body>
-		<!-- Container -->
-		<div class="container">
-			<!-- Navbar -->
-			<header class="navbar flex">
-				<div class="brand brand-navbar flex">
-					<div>
-						<img src="images/logo.svg" alt="Architecture logo" class="logo" />
-					</div>
-					<span>Architecture</span>
+		<header class="primary-header flex">
+			<div class="brand-navbar flex">
+				<span>Arch Designs</span>
+			</div>
+			<div class="search-bar">
+				<input type="text" placeholder="What are you looking for?" />
+				<i class="fa-solid fa-magnifying-glass"></i>
+			</div>
+			<div class="hamburger-menu">
+				<div class="menu-icon flex">
+					<div class="line line-1"></div>
+					<div class="line line-2"></div>
+					<div class="line line-3"></div>
 				</div>
-				<div class="search-bar">
-					<input type="text" placeholder="What are you looking for?" />
-					<i class="fa-solid fa-magnifying-glass"></i>
+				<div class="navigation flex">
+					<a href="#">Home</a>
+					<a href="#">About</a>
+					<a href="#">Projects</a>
+					<a href="#">Blog</a>
+					<a href="#">Customers</a>
+					<a href="#">Contact</a>
 				</div>
-				<div class="hamburger-menu">
-					<div class="menu-icon flex">
-						<div class="line line-1"></div>
-						<div class="line line-2"></div>
-						<div class="line line-3"></div>
-					</div>
-					<div class="navigation flex">
-						<a href="#">Home</a>
-						<a href="#">About</a>
-						<a href="#">Projects</a>
-						<a href="#">Blog</a>
-						<a href="#">Customers</a>
-						<a href="#">Contact</a>
-					</div>
-				</div>
-			</header>
-			<!-- End Navbar -->
+			</div>
+		</header>
+		<!-- End Navbar -->
+		<main class="grid-container">
 			<!-- Landing -->
-			<section class="landing width">
-				<div class="landing-img">
-					<img src="images/landing-bg.jpg" />
+			<section class="landing grid-container">
+				<div class="landing-content">
+					<picture>
+						<img src="images/landing-bg.jpg" />
+					</picture>
 					<div class="banner">
-						<h1 class="banner-heading"><span>Dream</span>House</h1>
+						<h1 class="banner-heading"><span>Dreams</span>Fulfilled</h1>
 						<div class="banner-content flex">
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit possimus volup .</p>
 							<button>Read More</button>
@@ -61,7 +58,7 @@
 			</section>
 			<!-- End Landing -->
 			<!-- About -->
-			<section class="about width flex">
+			<section class="grid-container grid-container-about">
 				<div class="about-left">
 					<h1>A Creative Building And Design Company</h1>
 					<p>
@@ -71,19 +68,20 @@
 					<button>Read More</button>
 				</div>
 				<div class="about-right">
-					<div class="frame"></div>
+					<!-- <div class="frame"></div> -->
 					<div class="about-img-wrapper">
 						<img src="images/about.jpg" alt="" />
 					</div>
-				</div>
-				<div class="experience section-bottom">
-					<h1>20 Years</h1>
-					<h3>Experience Working</h3>
+
+					<div class="experience section-bottom">
+						<h1>20 Years</h1>
+						<h3>Experience Working</h3>
+					</div>
 				</div>
 			</section>
 			<!-- End About -->
 			<!-- Projects -->
-			<section class="projects width">
+			<!-- <section class="projects">
 				<h1 class="projects-heading">Latest Projects</h1>
 				<div class="cards flex">
 					<div class="card">
@@ -126,10 +124,10 @@
 					<h1>Awesome</h1>
 					<h3>Designs</h3>
 				</div>
-			</section>
+			</section> -->
 			<!-- End Projects -->
 			<!-- Customers -->
-			<section class="customers width">
+			<!-- <section class="customers">
 				<h1 class="customers-heading">Customers</h1>
 				<div class="customers-content flex">
 					<div class="customers-card">
@@ -163,10 +161,10 @@
 					<h1>Client</h1>
 					<h3>Says</h3>
 				</div>
-			</section>
+			</section> -->
 			<!-- End Customers -->
 			<!-- Contacts -->
-			<section class="contact width flex">
+			<!-- <section class="contact flex">
 				<div class="contact-content flex">
 					<div class="contact-left">
 						<h1>Get the latest updates</h1>
@@ -176,25 +174,21 @@
 						<i class="fa-solid fa-paper-plane"></i>
 					</div>
 				</div>
-			</section>
+			</section> -->
 			<!-- End Contacts -->
-			<!-- Footer -->
-			<footer class="footer width">
-				<div class="footer-content">
-					<div class="brand brand-footer flex">
-						<div class="logo1"></div>
-						<div class="logo2"></div>
-						<div class="logo3"></div>
-						<span>Architecture</span>
-					</div>
-					<div class="copyright">
-						<p>&copy; All Rights Reserved.</p>
-					</div>
+		</main>
+		<!-- Footer -->
+		<!-- <footer class="footer">
+			<div class="footer-content">
+				<div class="brand brand-footer">
+					<span>Arch Designs</span>
 				</div>
-			</footer>
-			<!-- End Footer -->
-		</div>
-		<!-- End Container -->
+				<div class="copyright">
+					<p>&copy; All Rights Reserved.</p>
+				</div>
+			</div>
+		</footer> -->
+		<!-- End Footer -->
 
 		<script src="script.js"></script>
 	</body>
