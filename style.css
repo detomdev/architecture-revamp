@@ -11,7 +11,7 @@
 	/* font-sizes */
 	--fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
 	--fs-800: 3.5rem;
-	--fs-700: 1.5rem;
+	--fs-700: 2rem;
 	--fs-600: 1rem;
 	--fs-500: 1rem;
 	--fs-400: 0.9375rem;
@@ -195,8 +195,8 @@ select {
 .ff-serif {
 	font-family: var(--ff-serif);
 }
-.ff-sans-cond {
-	font-family: var(--ff-sans-cond);
+.ff-sans-disp {
+	font-family: var(--ff-sans-display);
 }
 .ff-sans-normal {
 	font-family: var(--ff-sans-normal);
@@ -306,7 +306,6 @@ select {
 	border: none;
 	padding: 2rem 2rem 2rem 4rem;
 	font-size: 1.6rem;
-	color: #fff;
 	border-radius: 0.5rem;
 	position: relative;
 	margin-right: 1rem;
@@ -376,7 +375,6 @@ select {
 
 .navigation a {
 	font-family: var(--ff-sans-normal);
-	color: #fff;
 	font-size: 5rem;
 	letter-spacing: 0.3rem;
 	text-transform: uppercase;
@@ -455,18 +453,18 @@ select {
 /* Landing */
 
 .landing {
-	height: 85vh;
+	height: 100vh;
 }
 
 .landing-content {
 	position: relative;
 }
 
-/* .landing-content img {
-	width: 90%;
+.landing-content img {
+	width: 100%;
 	height: auto;
 	object-fit: cover;
-} */
+}
 
 .banner {
 	position: absolute;
@@ -476,7 +474,6 @@ select {
 
 .banner-heading {
 	font-size: 8rem;
-	color: #fff;
 	text-transform: uppercase;
 }
 
@@ -494,7 +491,6 @@ select {
 .banner-content p {
 	width: 40rem;
 	font-size: 1.5rem;
-	color: #fff;
 	margin-right: 2rem;
 	line-height: 1.5;
 	text-align: left;
@@ -505,7 +501,6 @@ select {
 	height: 5rem;
 	background-color: transparent;
 	border: 0.3rem solid #fff;
-	color: #fff;
 	font-size: 1.6rem;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -533,15 +528,14 @@ select {
 }
 
 .about-left h1 {
-	font-size: 5rem;
-	color: #fff;
+	font-family: var(--ff-sans-disp);
+	line-height: 1.3;
 	width: 40rem;
 	margin-bottom: 6rem;
 }
 
 .about-left p {
 	font-size: 2rem;
-	color: #fff;
 	width: 50rem;
 	margin-bottom: 5rem;
 }
@@ -557,14 +551,14 @@ select {
 	cursor: pointer;
 }
 
-.frame {
+/* .frame {
 	width: 50rem;
 	height: 35rem;
 	border: 3rem solid hsl(0, 0%, 33%);
-	/* position: absolute; */
+	position: absolute;
 	top: 15rem;
 	right: 40rem;
-}
+} */
 
 .about-img-wrapper {
 	width: 60rem;
@@ -588,7 +582,7 @@ select {
 	border-right: 1rem solid #dba81b;
 	text-align: right;
 	padding-right: 2rem;
-	padding-top: 1rem;
+	padding-top: 5rem;
 }
 
 .section-bottom h1 {
@@ -596,13 +590,10 @@ select {
 	font-size: 6rem;
 	color: #555;
 	letter-spacing: 0.5rem;
-	text-transform: uppercase;
 }
 
 .section-bottom h3 {
 	font-size: 2.5rem;
-	color: #fff;
-	text-transform: uppercase;
 }
 /* End About */
 
