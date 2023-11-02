@@ -594,7 +594,7 @@ select {
 }
 
 .projects {
-	height: 43%;
+	height: 36%;
 }
 
 .projects-heading {
@@ -673,7 +673,7 @@ select {
 
 /* Team */
 .team {
-	height: 100vh;
+	height: 100%;
 	background-color: #313133;
 	padding-top: 5rem;
 	/* position: relative; */
@@ -682,10 +682,12 @@ select {
 .team .grid-container-team {
 	display: grid;
 	grid-template-columns: minmax(5rem, 1fr) repeat(4, minmax(0, 40rem)) minmax(5rem, 1fr);
-	grid-template-areas: ". a a b c .";
+	grid-template-areas:
+		". a b c d ."
+		". e f g h.";
 	column-gap: var(--container-gap, 5rem);
-	/* grid-template-rows: repeat(3, min-content); */
-	/* row-gap: var(--container-gap, 8rem); */
+	grid-template-rows: repeat(2, min-content);
+	row-gap: var(--container-gap, 18rem);
 	align-items: center;
 	text-align: left;
 }
@@ -693,12 +695,32 @@ select {
 #principal {
 	grid-area: a;
 }
+
 #team-card2 {
 	grid-area: b;
 }
 
 #team-card3 {
 	grid-area: c;
+}
+#team-card4 {
+	grid-area: d;
+}
+
+#team-card5 {
+	grid-area: e;
+}
+
+#team-card6 {
+	grid-area: f;
+}
+
+#team-card7 {
+	grid-area: g;
+}
+
+#team-card8 {
+	grid-area: h;
 }
 
 .team-heading {
@@ -711,58 +733,8 @@ select {
 }
 
 .team-content {
-	/* width: 80%; */
+	width: 100%;
 	margin: 20rem auto;
-	justify-content: space-evenly;
-}
-
-.team-card-p {
-	position: relative;
-}
-
-.team-card-p img {
-	width: 20rem;
-	height: 20rem;
-	object-fit: cover;
-	position: absolute;
-	top: -10rem;
-	left: 27rem;
-	border-radius: 0.5rem;
-	box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
-}
-
-.team-card-content-p {
-	width: 75rem;
-	height: 45rem;
-	background-color: #777;
-	border-radius: 0.5rem;
-	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
-	padding: 4rem 4rem 0 4rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.team-card-content-p h1 {
-	font-size: 2.5rem;
-	color: #fff;
-	margin-top: 2rem;
-}
-
-.team-card-content-p h3 {
-	font-size: 1.8rem;
-	color: #ccc;
-	margin-bottom: 3rem;
-}
-
-.team-card-content-p i {
-	font-size: 2rem;
-	color: #fff;
-}
-
-.team-card-content-p p {
-	font-size: 1.6rem;
-	color: #fff;
 }
 
 .team-card {
@@ -781,7 +753,7 @@ select {
 }
 
 .team-card-content {
-	width: 35rem;
+	width: 36rem;
 	height: 45rem;
 	background-color: #777;
 	border-radius: 0.5rem;
