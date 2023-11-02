@@ -594,7 +594,8 @@ select {
 }
 
 .projects {
-	height: 36%;
+	height: auto;
+	padding-bottom: 15rem;
 }
 
 .projects-heading {
@@ -673,10 +674,9 @@ select {
 
 /* Team */
 .team {
-	height: 100%;
+	height: auto;
 	background-color: #313133;
 	padding-top: 5rem;
-	/* position: relative; */
 }
 
 .team .grid-container-team {
