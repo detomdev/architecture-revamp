@@ -515,14 +515,14 @@ select {
 
 .grid-container-about {
 	grid-template-areas: ". about-left about-left about-right about-right .";
-	column-gap: var(--container-gap, 10rem);
-
+	column-gap: var(--container-gap, 5rem);
 	text-align: left;
 	align-items: center;
 }
 
 .grid-container-about .about-left {
 	grid-area: about-left;
+	margin-right: 5rem;
 	flex-direction: column;
 	justify-self: flex-end;
 }
@@ -542,7 +542,7 @@ select {
 
 .about-left p {
 	font-size: 2rem;
-	width: 50rem;
+	width: 40rem;
 	margin-bottom: 5rem;
 }
 
@@ -557,21 +557,9 @@ select {
 	cursor: pointer;
 }
 
-/* .frame {
-	width: 50rem;
-	height: 35rem;
-	border: 3rem solid hsl(0, 0%, 33%);
-	position: absolute;
-	top: 15rem;
-	right: 40rem;
-} */
-
 .about-img-wrapper {
 	width: 80rem;
 	height: auto;
-	/* position: absolute; */
-	/* top: 8rem;
-	right: 33rem; */
 }
 
 .about-img-wrapper img {
@@ -579,16 +567,6 @@ select {
 	height: auto;
 	/* object-fit: cover; */
 }
-
-/* .section-bottom {
-	bottom: 2rem;
-	right: 33rem;
-	height: 12rem;
-	border-right: 1rem solid #dba81b;
-	text-align: right;
-	padding-right: 2rem;
-	padding-top: 5rem;
-} */
 
 .caption h3 {
 	font-family: var(--ff-sans-normal);
@@ -693,12 +671,34 @@ select {
 }
 /* End Projects */
 
-/* Customers */
+/* Team */
 .team {
-	height: 80vh;
+	height: 100vh;
 	background-color: #313133;
-	padding-top: 5cqb;
-	position: relative;
+	padding-top: 5rem;
+	/* position: relative; */
+}
+
+.team .grid-container-team {
+	display: grid;
+	grid-template-columns: minmax(5rem, 1fr) repeat(4, minmax(0, 40rem)) minmax(5rem, 1fr);
+	grid-template-areas: ". a a b c .";
+	column-gap: var(--container-gap, 5rem);
+	/* grid-template-rows: repeat(3, min-content); */
+	/* row-gap: var(--container-gap, 8rem); */
+	align-items: center;
+	text-align: left;
+}
+
+#principal {
+	grid-area: a;
+}
+#team-card2 {
+	grid-area: b;
+}
+
+#team-card3 {
+	grid-area: c;
 }
 
 .team-heading {
@@ -712,8 +712,57 @@ select {
 
 .team-content {
 	/* width: 80%; */
-	margin: 10rem auto;
+	margin: 20rem auto;
 	justify-content: space-evenly;
+}
+
+.team-card-p {
+	position: relative;
+}
+
+.team-card-p img {
+	width: 20rem;
+	height: 20rem;
+	object-fit: cover;
+	position: absolute;
+	top: -10rem;
+	left: 27rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.team-card-content-p {
+	width: 75rem;
+	height: 45rem;
+	background-color: #777;
+	border-radius: 0.5rem;
+	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+	padding: 4rem 4rem 0 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.team-card-content-p h1 {
+	font-size: 2.5rem;
+	color: #fff;
+	margin-top: 2rem;
+}
+
+.team-card-content-p h3 {
+	font-size: 1.8rem;
+	color: #ccc;
+	margin-bottom: 3rem;
+}
+
+.team-card-content-p i {
+	font-size: 2rem;
+	color: #fff;
+}
+
+.team-card-content-p p {
+	font-size: 1.6rem;
+	color: #fff;
 }
 
 .team-card {
@@ -722,26 +771,31 @@ select {
 
 .team-card img {
 	width: 20rem;
+	height: 20rem;
+	object-fit: cover;
 	position: absolute;
-	top: -5rem;
-	right: 2rem;
+	top: -10rem;
+	left: 8rem;
 	border-radius: 0.5rem;
 	box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .team-card-content {
-	width: 50rem;
-	height: 22rem;
+	width: 35rem;
+	height: 45rem;
 	background-color: #777;
 	border-radius: 0.5rem;
 	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
-	padding: 2rem;
+	padding: 4rem 4rem 0 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .team-card-content h1 {
 	font-size: 2.5rem;
 	color: #fff;
-	margin-bottom: 1rem;
+	margin-top: 2rem;
 }
 
 .team-card-content h3 {
@@ -759,7 +813,7 @@ select {
 	font-size: 1.6rem;
 	color: #fff;
 }
-/* End customers */
+/* End Team */
 
 /* Contacts */
 .contact {
