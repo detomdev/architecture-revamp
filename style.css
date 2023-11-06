@@ -745,11 +745,44 @@ select {
 	width: 20rem;
 	height: 20rem;
 	object-fit: cover;
+	object-position: 50% 50%;
 	position: absolute;
 	top: -10rem;
 	left: 8rem;
 	border-radius: 0.5rem;
 	box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+#principal img {
+	object-position: top center;
+}
+
+#team-card2 img {
+	object-position: top center;
+}
+
+#team-card3 img {
+	object-position: top center;
+}
+
+#team-card4 img {
+	object-position: top 20px center;
+}
+
+#team-card5 img {
+	object-position: top center;
+}
+
+#team-card6 img {
+	object-position: top center;
+}
+
+#team-card7 img {
+	object-position: top center;
+}
+
+#team-card8 img {
+	object-position: top center;
 }
 
 .team-card-content {
