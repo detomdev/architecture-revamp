@@ -457,29 +457,26 @@ select {
 	height: 80vh;
 	background-image: url(/images/landing-bg.jpg);
 	background-size: 100%;
-	background-position: center;
+	background-position: center center;
 	background-repeat: no-repeat;
 	position: relative;
 }
 
 .banner {
 	position: absolute;
+	height: 25%;
 	left: 35%;
 	bottom: 10rem;
+	padding: 0rem 3rem;
 	box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.8);
 	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .banner-heading {
 	font-size: 8rem;
-	text-transform: uppercase;
-}
-
-.banner-heading span {
-	font-family: var(--ff-sans-disp);
-	font-size: 8rem;
-	color: #dba81b;
-	letter-spacing: 0.5rem;
+	font-family: var(--ff-sans-normal);
+	letter-spacing: 0.25rem;
+	line-height: 2;
 }
 
 .banner-content {
@@ -487,9 +484,9 @@ select {
 }
 
 .banner-content p {
-	width: 40rem;
+	width: 50rem;
 	font-size: 1.5rem;
-	margin-right: 2rem;
+	margin-right: 2.5rem;
 	line-height: 1.5;
 	text-align: left;
 }
@@ -676,7 +673,7 @@ select {
 .team {
 	height: auto;
 	background-color: #313133;
-	padding-top: 5rem;
+	padding: 2.5rem 0;
 }
 
 .team .grid-container-team {
@@ -878,55 +875,32 @@ select {
 /* Footer */
 .footer {
 	width: 100%;
-	height: 8rem;
+	height: auto;
 	background-color: #202020;
 	border-top: 0.1rem solid #3e3e41;
 	position: relative;
 }
 
+.footer-content {
+	padding: 5rem;
+}
+
 .brand-footer {
-	position: absolute;
-	top: 3.5rem;
-	left: 20%;
 	align-items: flex-start;
-}
-
-.brand-footer .logo1 {
-	width: 3rem;
-	height: 3rem;
-	border: 0.2rem solid #dba81b;
-}
-
-.brand-footer .logo2 {
-	width: 2.5rem;
-	height: 2.5rem;
-	background-color: #202020;
-	top: 0.7rem;
-	left: 0.7rem;
-}
-
-.brand-footer .logo3 {
-	width: 2.5rem;
-	height: 2.5rem;
-	border: 0.2rem solid #dba81b;
-	background-color: #202020;
-	top: 1.3rem;
-	left: 1.3rem;
+	justify-content: space-evenly;
+	padding: 0 50rem;
 }
 
 .brand-footer span {
 	font-size: 2rem;
-	text-transform: uppercase;
+	line-height: 2.25;
+	/* text-transform: uppercase; */
+}
+.brand-footer p {
+	font-size: 1.5rem;
+	/* text-transform: uppercase; */
 }
 
-.copyright {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	right: 20%;
-	font-size: 1.6rem;
-	color: #ccc;
-}
 /* End Footer */
 
 /* End Container */
