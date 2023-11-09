@@ -14,7 +14,7 @@
 			rel="stylesheet"
 		/>
 	</head>
-	<body>
+	<body flex>
 		<!-- <header class="primary-header flex">
 			<div class="brand-navbar flex">
 				<span>Arch Designs</span>
@@ -39,19 +39,24 @@
 			</div>
 		</header> -->
 		<!-- End Navbar -->
-		<main>
+		<main flex>
 			<!-- Landing -->
-			<section class="landing grid-container">
-				<div class="landing-content">
-					<!-- <div class="img-wrapper">
-					<picture>
-						<img class="landing-img" src="images/landing-bg.jpg" />
-					</picture>
-					</div> -->
+			<section class="landing flex">
+				<!-- <div class="landing-content flex"> -->
+					<div class="slider-container">
+						<div class="slide active" style="background-image: url(/images/landing-bg.jpg);">
+						</div>
+					</div>
+					<button class="arrow left-arrow" id="left">
+						<i class="fas fa-arrow-left"></i>
+					</button>
 
+					<button class="arrow right-arrow" id="right">
+						<i class="fas fa-arrow-right"></i>
+					</button>
 					<div class="banner">
-						<h1 class="banner-heading">As you imagined</h1>
 						<div class="banner-content flex">
+							<h1 class="banner-heading uppercase text-white letter-spacing-3">Imagine</h1>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit possimus volup .</p>
 							<button class="text-white">Read More</button>
 						</div>
@@ -299,7 +304,7 @@
 				<div class="brand-footer flex">
 					<div>
 					<span>Arch Designs</span>
-					<p>Barry T. Gilreath</p>
+					<p>John Walsh</p>
 					<p>info@archdesings.com</p>
 					</div>
 
