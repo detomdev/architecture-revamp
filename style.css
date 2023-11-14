@@ -286,40 +286,11 @@ select {
 	grid-column: span 4;
 }
 
-/* .logo {
-	position: absolute;
-	top: 1rem;
-	left: 5rem;
-	width: 5%;
-	height: auto;
-} */
-
 .brand-navbar span {
 	font-size: 3rem;
 	letter-spacing: 0.3rem;
+	color: hsl(44, 78%, 48%);
 }
-
-/* .search-bar {
-	right: 1rem;
-} */
-
-.search-bar input {
-	width: 30rem;
-	height: 4rem;
-	background-color: hsl(240, 2%, 25%);
-	border: none;
-	padding: 2rem 2rem 2rem 4rem;
-	font-size: 1.6rem;
-	border-radius: 0.5rem;
-	position: relative;
-	margin-right: 1rem;
-}
-
-.search-bar input::placeholder {
-	color: #ccc;
-}
-
-/* End */
 
 .navigation a {
 	font-family: var(--ff-sans-normal);
@@ -328,74 +299,42 @@ select {
 	color: #fff;
 	text-decoration: none;
 	padding: 1rem;
-	/* position: relative; */
-	/* opacity: 1;
-	visibility: visible; */
+	color: #ccc;
 }
 
-/* .change .navigation a {
-	opacity: 1;
-	visibility: visible;
-} */
-
-/* .change .navigation a:nth-child(1) {
-	transition: all 0.3s 0.3s;
+.navigation a:hover {
+	color: hsl(44, 78%, 48%);
 }
 
-.change .navigation a:nth-child(2) {
-	transition: all 0.3s 0.4s;
+.search-bar {
+	position: relative;
 }
 
-.change .navigation a:nth-child(3) {
-	transition: all 0.3s 0.5s;
+.search-bar input {
+	width: 35rem;
+	height: 4rem;
+	background-color: hsl(240, 2%, 25%);
+	border: none;
+	padding: 2rem 2rem 2rem 4rem;
+	font-size: 1.6rem;
+	border-radius: 0.5rem;
 }
 
-.change .navigation a:nth-child(4) {
-	transition: all 0.3s 0.6s;
+.search-bar input::placeholder {
+	color: #ccc;
 }
 
-.change .navigation a:nth-child(5) {
-	transition: all 0.3s 0.7s;
-}
-
-.change .navigation a:nth-child(6) {
-	transition: all 0.3s 0.8s;
-} */
-
-/* .navigation a::before {
-	content: "";
-	width: 15rem;
-	height: 0.5rem;
-	background-color: #dba81b;
-	position: absolute;
+.search-bar i {
 	top: 50%;
-	left: -17rem;
 	transform: translateY(-50%);
-	transform: scale(0);
-	transform-origin: right;
-	transition: 0.3s;
-} */
-
-/* .navigation a:hover::before {
-	transform: scale(1);
-} */
-
-/* .navigation a::after {
-	content: "";
-	width: 15rem;
-	height: 0.5rem;
-	background-color: #dba81b;
+	left: 1.5rem;
 	position: absolute;
-	top: 50%;
-	right: -17rem;
-	transform: translateY(-50%);
-	transform: scale(0);
-	transform-origin: left;
-	transition: 0.3s;
-} */
+	font-size: 1.6rem;
+	color: #ccc;
+}
 
-/* .navigation a:hover::after {
-	transform: scale(1);
+/* .search-bar:focus {
+	outline: 0;
 } */
 /* End Navbar */
 
@@ -407,7 +346,7 @@ select {
 	height: 90vh;
 	background-image: url(/images/landing-bg.jpg);
 	background-size: 100%;
-	background-position: center center;
+	background-position: center -200px;
 	background-repeat: no-repeat;
 	position: relative;
 }
@@ -442,7 +381,7 @@ select {
 	opacity: 0;
 	height: 100vh;
 	width: 100vw;
-	background-position: center center;
+	background-position: center 10%;
 	background-size: cover;
 	position: absolute;
 	top: -15vh;
