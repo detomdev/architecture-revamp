@@ -1,4 +1,4 @@
-const body = document.main;
+const body = document.getElementById("landing");
 const slides = document.querySelectorAll(".slide");
 const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");

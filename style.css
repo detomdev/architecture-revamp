@@ -97,12 +97,12 @@ body {
 	align-items: center;
 }
 
-main {
+/* main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin: 0%;
-}
+} */
 
 /* make images easier to work with */
 img,
@@ -344,9 +344,9 @@ select {
 	justify-content: center;
 	align-items: center;
 	height: 90vh;
-	background-image: url(/images/landing-bg.jpg);
-	background-size: 100%;
-	background-position: center -200px;
+	/* background-image: url(/images/landing-bg.jpg); */
+	background-size: cover;
+	background-position: center center;
 	background-repeat: no-repeat;
 	position: relative;
 }
@@ -362,12 +362,12 @@ select {
 	z-index: 1;
 }
 
-.landing-content {
+/* .landing-content {
 	width: 100vw;
 	justify-content: center;
 	align-items: center;
 	background-repeat: no-repeat;
-}
+} */
 
 .slider-container {
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -389,6 +389,10 @@ select {
 	transition: 0.4s ease;
 	z-index: 3;
 }
+
+/* .slide3 {
+	height: 80%;
+} */
 
 .slide.active {
 	opacity: 1;
@@ -771,61 +775,6 @@ select {
 }
 /* End Team */
 
-/* Contacts */
-.contact {
-	height: 25rem;
-	justify-content: center;
-	align-items: center;
-	color: #fff;
-}
-
-.contact-content {
-	width: 50%;
-	justify-content: space-evenly;
-}
-
-.contact-content h1 {
-	font-size: 3rem;
-	text-transform: uppercase;
-	columns: #ccc;
-}
-
-.contact-content input {
-	width: 45rem;
-	height: 4rem;
-	background-color: transparent;
-	padding: 1.5rem 1.5rem 2.2rem 0;
-	border: none;
-	border-bottom: 0.1rem solid #777;
-	font-size: 1.8rem;
-	color: #ccc;
-	transition: border-bottom 0.3s;
-	cursor: pointer;
-}
-
-.contact-content input:hover {
-	border-bottom: 0.1rem solid #dba81b;
-}
-
-.contact-content input::placeholder {
-	color: #ccc;
-	letter-spacing: 0.1rem;
-}
-
-.contact-right {
-	position: relative;
-}
-
-.contact-right i {
-	font-size: 1.8rem;
-	position: absolute;
-	top: 20%;
-	right: 0;
-	color: #ccc;
-	cursor: pointer;
-}
-/* End Contacts */
-
 /* Footer */
 .footer {
 	width: 100%;
@@ -843,6 +792,7 @@ select {
 	align-items: flex-start;
 	justify-content: space-evenly;
 	padding: 0 50rem;
+	gap: 5rem;
 }
 
 .brand-footer span {
@@ -852,10 +802,50 @@ select {
 }
 .brand-footer p {
 	font-size: 1.5rem;
-	/* text-transform: uppercase; */
 }
 
+.brand-footer #location2 {
+	padding-top: 1rem;
+}
 /* End Footer */
+/* Contacts */
+.contact-right input {
+	width: 40rem;
+	height: 4rem;
+	background-color: transparent;
+	padding: 1.5rem 1.5rem 2.2rem 0;
+	border: none;
+	border-bottom: 0.1rem solid #777;
+	font-size: 1.8rem;
+	color: #ccc;
+	transition: border-bottom 0.3s;
+	cursor: pointer;
+}
+
+.contact-right input:hover {
+	border-bottom: 0.1rem solid #dba81b;
+}
+
+.contact-right input::placeholder {
+	color: #ccc;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+}
+
+.contact-right {
+	position: relative;
+	flex-direction: column;
+}
+
+.contact-right i {
+	font-size: 1.8rem;
+	position: absolute;
+	top: 65%;
+	right: 0;
+	color: #ccc;
+	cursor: pointer;
+}
+/* End Contacts */
 
 /* End Container */
 
