@@ -11,8 +11,8 @@
 	/* font-sizes */
 	--fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
 	--fs-800: 3.5rem;
-	--fs-700: 2rem;
-	--fs-600: 1rem;
+	--fs-700: 2.5rem;
+	--fs-600: 1.5rem;
 	--fs-500: 1rem;
 	--fs-400: 0.9375rem;
 	--fs-300: 1rem;
@@ -96,13 +96,6 @@ body {
 	justify-content: center;
 	align-items: center;
 }
-
-/* main {
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin: 0%;
-} */
 
 /* make images easier to work with */
 img,
@@ -275,10 +268,10 @@ select {
 
 /* Navbar */
 .primary-header {
-	width: 100%;
+	max-width: 100%;
 	height: 10rem;
 	background-color: hsl(var(--clr-dark));
-	position: fixed;
+	/* position: fixed; */
 	z-index: 100;
 	align-items: center;
 	justify-content: space-evenly;
@@ -310,10 +303,11 @@ select {
 	position: relative;
 }
 
-.search-bar input {
+.search-bar input,
+.search-bar select {
 	width: 35rem;
 	height: 4rem;
-	background-color: hsl(240, 2%, 25%);
+	background-color: hsl(0, 0%, 33%);
 	border: none;
 	padding: 2rem 2rem 2rem 4rem;
 	font-size: 1.6rem;
@@ -324,6 +318,10 @@ select {
 	color: #ccc;
 }
 
+.search-bar *:focus {
+	outline: none;
+}
+
 .search-bar i {
 	top: 50%;
 	transform: translateY(-50%);
@@ -332,10 +330,6 @@ select {
 	font-size: 1.6rem;
 	color: #ccc;
 }
-
-/* .search-bar:focus {
-	outline: 0;
-} */
 /* End Navbar */
 
 /* Landing */
@@ -344,12 +338,17 @@ select {
 	justify-content: center;
 	align-items: center;
 	height: 90vh;
-	/* background-image: url(/images/landing-bg.jpg); */
 	background-size: cover;
-	background-position: center center;
+	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
 }
+
+/* .blur {
+	width: 100%;
+	height: 100%;
+	border: 5px solid purple;
+} */
 
 .landing::before {
 	content: "";
@@ -362,17 +361,22 @@ select {
 	z-index: 1;
 }
 
-/* .landing-content {
-	width: 100vw;
-	justify-content: center;
-	align-items: center;
-	background-repeat: no-repeat;
+/* .blur {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 90vh;
+	z-index: 2;
+	filter: blur(50px);
+	border: 5px solid red;
 } */
 
 .slider-container {
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	height: 70vh;
 	width: 70vw;
+	margin-top: 5rem;
 	position: relative;
 	overflow: hidden;
 }
@@ -381,7 +385,7 @@ select {
 	opacity: 0;
 	height: 100vh;
 	width: 100vw;
-	background-position: center 10%;
+	background-position: center;
 	background-size: cover;
 	position: absolute;
 	top: -15vh;
@@ -390,9 +394,21 @@ select {
 	z-index: 3;
 }
 
-/* .slide3 {
-	height: 80%;
-} */
+#slide2 {
+	background-position-y: 10%;
+}
+
+#slide3 {
+	background-size: 90%;
+	background-position-x: -55%;
+	background-position-y: -10%;
+}
+
+#slide4 {
+	background-size: 90%;
+	/* background-position-x: -25%; */
+	background-position-y: 90%;
+}
 
 .slide.active {
 	opacity: 1;
@@ -401,9 +417,7 @@ select {
 .arrow {
 	position: absolute;
 	background-color: transparent;
-	color: #fff;
 	padding: 20px;
-	font-size: 40px;
 	border: 5px solid hsl(44, 78%, 48%);
 	top: 50%;
 	transform: translateY(-50%);
@@ -430,9 +444,7 @@ select {
 }
 
 .banner-heading {
-	font-size: 6rem;
 	font-family: var(--ff-sans-normal);
-	letter-spacing: 0.8rem;
 	line-height: 2;
 	margin-right: 2rem;
 }
@@ -444,7 +456,7 @@ select {
 
 .banner-content p {
 	width: 50rem;
-	font-size: 1.5rem;
+	/* font-size: 1.5rem; */
 	margin-right: 2.5rem;
 	line-height: 1.5;
 	text-align: left;
@@ -460,11 +472,15 @@ select {
 	text-transform: uppercase;
 	cursor: pointer;
 }
+.banner-content button:hover {
+	color: #dba81b;
+}
+
 /* End body */
 
 /* About */
 .about {
-	height: 70vh;
+	height: 80vh;
 	background-color: #313133;
 }
 
@@ -492,12 +508,12 @@ select {
 	font-family: var(--ff-sans-disp);
 	line-height: 1.3;
 	width: 40rem;
-	margin-bottom: 6rem;
+	margin-bottom: 3rem;
 }
 
 .about-left p {
-	font-size: 2rem;
 	width: 40rem;
+	line-height: 1.75;
 	margin-bottom: 5rem;
 }
 
@@ -512,6 +528,10 @@ select {
 	cursor: pointer;
 }
 
+.about-left button:hover {
+	color: #fff;
+}
+
 .about-img-wrapper {
 	width: 80rem;
 	height: auto;
@@ -524,9 +544,7 @@ select {
 }
 
 .caption h3 {
-	font-family: var(--ff-sans-normal);
-	font-size: 1.5rem;
-	color: hsl(var(--clr-white));
+	/* font-size: 1.5rem; */
 	letter-spacing: 0.2rem;
 	margin-top: 2rem;
 	width: 70%;
@@ -554,8 +572,7 @@ select {
 }
 
 .projects-heading {
-	font-size: 6rem;
-	color: #fff;
+	/* font-size: 6rem; */
 	margin: 10rem 0 0rem 0;
 	letter-spacing: 0.8rem;
 	grid-area: title;
@@ -608,6 +625,10 @@ select {
 	font-size: 1.8rem;
 	letter-spacing: 0.1rem;
 	cursor: pointer;
+}
+
+.card-content .card-btn:hover {
+	color: #fff;
 }
 
 .card-content h1 {
@@ -679,8 +700,6 @@ select {
 }
 
 .team-heading {
-	font-size: 6rem;
-	color: #fff;
 	margin: 10rem 0 0rem 0;
 	letter-spacing: 0.8rem;
 	text-transform: uppercase;
@@ -781,7 +800,6 @@ select {
 	height: auto;
 	background-color: #202020;
 	border-top: 0.1rem solid #3e3e41;
-	position: relative;
 }
 
 .footer-content {
@@ -791,15 +809,14 @@ select {
 .brand-footer {
 	align-items: flex-start;
 	justify-content: space-evenly;
-	padding: 0 50rem;
-	gap: 5rem;
+	padding: 0 5rem;
 }
 
 .brand-footer span {
 	font-size: 2rem;
 	line-height: 2.25;
-	/* text-transform: uppercase; */
 }
+
 .brand-footer p {
 	font-size: 1.5rem;
 }
@@ -809,7 +826,8 @@ select {
 }
 /* End Footer */
 /* Contacts */
-.contact-right input {
+.contact-right input,
+.contact-right select {
 	width: 40rem;
 	height: 4rem;
 	background-color: transparent;
@@ -819,13 +837,15 @@ select {
 	font-size: 1.8rem;
 	color: #ccc;
 	transition: border-bottom 0.3s;
-	cursor: pointer;
 }
 
 .contact-right input:hover {
 	border-bottom: 0.1rem solid #dba81b;
 }
 
+.contact-right *:focus {
+	outline: none;
+}
 .contact-right input::placeholder {
 	color: #ccc;
 	font-size: 1.5rem;

@@ -22,7 +22,6 @@ leftBtn.addEventListener("click", () => {
 	if (activeSlide < 0) {
 		activeSlide = slides.length - 1;
 	}
-
 	setBgToBody();
 	setActiveSlide();
 });
