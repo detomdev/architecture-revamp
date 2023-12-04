@@ -361,17 +361,6 @@ select {
 	z-index: 1;
 }
 
-/* .blur {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 90vh;
-	z-index: 2;
-	filter: blur(50px);
-	border: 5px solid red;
-} */
-
 .slider-container {
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	height: 70vh;
