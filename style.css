@@ -274,7 +274,7 @@ select {
 	/* position: fixed; */
 	z-index: 100;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: center;
 	padding: 0 8rem;
 	grid-column: span 4;
 }
@@ -283,6 +283,10 @@ select {
 	font-size: 3rem;
 	letter-spacing: 0.3rem;
 	color: hsl(44, 78%, 48%);
+}
+
+.navigation {
+	padding-inline: 3.5%;
 }
 
 .navigation a {
@@ -758,6 +762,7 @@ select {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: flex-start;
 }
 
 .team-card-content h1 {
