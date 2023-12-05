@@ -635,10 +635,6 @@ select {
 	color: #fff;
 	margin-bottom: 4rem;
 }
-
-.designs {
-	right: 11rem;
-}
 /* End Projects */
 
 /* Team */
@@ -1060,7 +1056,7 @@ select {
 		margin-bottom: 4rem;
 	}
 }
-
+ */
 @media (max-width: 600px) {
 	html {
 		font-size: 35%;
@@ -1087,7 +1083,11 @@ select {
 	}
 
 	.landing {
-		height: 83vh;
+		height: 50vh;
+	}
+
+	.landing::before {
+		height: 50vh;
 	}
 
 	.banner {
@@ -1103,28 +1103,94 @@ select {
 		font-size: 5rem;
 	}
 
+	.grid-container-about {
+		grid-template-columns: minmax(0.5rem, 1fr) 1fr minmax(1rem, 1fr);
+		grid-template-areas:
+			". about-left ."
+			". about-right .";
+		column-gap: var(--container-gap, 2rem);
+		text-align: left;
+		align-items: center;
+	}
+
 	.about {
 		justify-content: center;
+		align-items: center;
 		height: 100%;
-		padding: 10rem 0 25rem 0;
+		padding: 10rem 0 10rem 0;
 	}
 
 	.about-left {
 		text-align: center;
 		margin-right: 0;
+		align-items: center;
 	}
 
 	.about-right {
 		display: none;
 	}
 
+	/* Projects  */
+	.projects {
+		justify-content: center;
+	}
+	.projects .grid-container-projects {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"title"
+			"a"
+			"b"
+			"c"
+			"d"
+			"e"
+			"f"
+			"g"
+			"h";
+		column-gap: var(--container-gap, 1rem);
+		grid-template-rows: repeat(8, auto);
+		row-gap: var(--container-gap, 12rem);
+	}
+
 	.projects-heading {
 		font-size: 6rem;
 	}
 
+	.cards {
+		align-items: center;
+		padding-inline: 8rem;
+	}
+
+	.card .img-wrapper img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.card-content {
+		text-align: center;
+	}
 	.customers-heading {
 		font-size: 6rem;
 	}
-} */
+	/* End Projects */
+
+	/* Team */
+	.team .grid-container-team {
+		grid-template-columns: minmax(0.5rem, 1fr) 1fr minmax(1rem, 1fr);
+		grid-template-areas:
+			". title ."
+			". a ."
+			". b ."
+			". c ."
+			". d ."
+			". e ."
+			". f ."
+			". g ."
+			". h .";
+		column-gap: var(--container-gap, 2rem);
+		grid-template-rows: repeat(8, min-content);
+		row-gap: var(--container-gap, 16rem);
+	}
+	/* End Teamunlikely */
+}
 
 /* End Responsive Design */
