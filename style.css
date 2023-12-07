@@ -1062,24 +1062,8 @@ select {
 		font-size: 35%;
 	}
 
-	.brand-navbar span {
-		display: none;
-	}
-
 	.navigation a {
-		font-size: 3rem;
-	}
-
-	.navigation a::before,
-	.navigation a::after {
-		width: 10rem;
-	}
-
-	.navigation a::before {
-		left: -13rem;
-	}
-	.navigation a::after {
-		right: -13rem;
+		display: none;
 	}
 
 	.landing {
