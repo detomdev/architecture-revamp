@@ -1051,7 +1051,34 @@ select {
  */
 
 @media (max-width: 2600px) {
-	.cards .grid-container-projects {
+	/* About Section */
+		.about .grid-container-about {
+			grid-template-columns: minmax(1rem, 1fr) 4fr minmax(1rem, 1fr);
+			grid-template-areas:
+				". . about-left about-left . ."
+				". . about-right about-right . .";
+			column-gap: var(--container-gap, 2rem);
+			align-items: center;
+		}
+
+
+		.grid-container-about .about-left {
+			grid-area: about-left;
+			margin-right: 5rem;
+			flex-direction: column;
+			justify-self: flex-end;
+		}
+
+		.grid-container-about .about-right {
+			grid-area: about-right;
+			flex-direction: column;
+			justify-self: flex-start;
+		}
+		/* End About Section */
+	}
+
+	/* Projects Section  */
+	.projects .grid-container-projects {
 		grid-template-columns: minmax(1rem, 1fr) repeat(2, 1fr) minmax(1rem, 1fr);
 		grid-template-areas:
 			". title title ."
@@ -1062,9 +1089,11 @@ select {
 		column-gap: var(--container-gap, 4rem);
 		grid-template-rows: repeat(6, min-content);
 	}
+	/* End PRojects Section  */
 
+	/* Team  Section */
 	.team .grid-container-team {
-		grid-template-columns: minmax(1rem, 1fr) repeat(2, 1fr) minmax(1rem, 1fr);
+		grid-template-columns: minmax(1rem, 1fr) repeat(4, 1fr) minmax(1rem, 1fr);
 		grid-template-areas:
 			". title title ."
 			". a b ."
@@ -1074,6 +1103,23 @@ select {
 		column-gap: var(--container-gap, 4rem);
 		grid-template-rows: repeat(3, min-content);
 	}
+	/* End Tesm Section */
+
+	/* Footer */
+	.brand-footer {
+		padding-left: 33rem;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		font-size: 6rem;
+		width: 75%;
+	}
+
+	.contact-right input,
+	.contact-right select {
+		width: 25rem;
+	}
+	/* End Footer */
 }
 
 @media (max-width: 600px) {
@@ -1159,6 +1205,7 @@ select {
 	.grid-container-about .about-left {
 		margin-right: 0;
 	}
+
 	.grid-container-about {
 		grid-template-columns: minmax(0.5rem, 1fr) 1fr minmax(0.5rem, 1fr);
 		grid-template-areas:
@@ -1331,6 +1378,7 @@ select {
 	.contact-right input,
 	.contact-right select {
 		font-size: 2.5rem;
+		width: 25rem;
 	}
 	/* End Footer */
 }
